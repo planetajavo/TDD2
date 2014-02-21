@@ -16,10 +16,7 @@ function sumNum (string) {
 
 	var number = parseInt(string);
 
-	if (!isNaN(number)){
-		return number;
-	}else{
-
+	if (isNaN(number)){
 		var result = 0;
 
 		var listOfItems = string.split(",");
@@ -31,7 +28,9 @@ function sumNum (string) {
 			}
 			return result;
 		};
-	
+		
+	}else{
+		return number;
 	}
 };
 
@@ -58,7 +57,7 @@ describe ("sumNum: ", function(){
 
 	  });
 
-
+ 
   
 
 
